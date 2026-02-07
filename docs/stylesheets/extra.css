@@ -1,0 +1,55 @@
+/* Переопределяем цвета только для темной темы (scheme="slate") */
+[data-md-color-scheme="slate"] {
+  /* --- DRACULA PALETTE --- */
+  --dracula-bg: #282a36;
+  --dracula-current-line: #44475a;
+  --dracula-fg: #f8f8f2;
+  --dracula-comment: #6272a4;
+  --dracula-cyan: #7bd9ed;
+  --dracula-green: #50fa7b;
+  --dracula-orange: #ffb86c;
+  --dracula-pink: #ff79c6;
+  --dracula-purple: #bd93f9;
+  --dracula-red: #ff5555;
+  --dracula-yellow: #f1fa8c;
+
+  /* --- Применяем к переменным Material MkDocs --- */
+  
+  /* Основной фон сайта */
+  --md-default-bg-color: var(--dracula-bg);
+  
+  /* Фон карточек и блоков */
+  --md-default-bg-color--light: var(--dracula-current-line);
+  --md-default-fg-color: var(--dracula-fg);
+  
+  /* Цвет основного текста */
+  --md-default-fg-color--light: var(--dracula-fg);
+  --md-default-fg-color--lighter: var(--dracula-comment);
+
+  /* Цвета ссылок и акцентов (Фиолетовый и Розовый) */
+  --md-typeset-a-color: var(--dracula-pink);
+  --md-accent-fg-color: var(--dracula-purple);
+  --md-primary-fg-color: var(--dracula-bg); /* Шапка в цвет фона */
+  --md-primary-bg-color: var(--dracula-bg);
+  
+  /* Цвет кода */
+  --md-code-bg-color: var(--dracula-current-line);
+  --md-code-fg-color: var(--dracula-fg);
+}
+
+/* Настраиваем шапку, чтобы она сливалась с фоном (стиль Dracula) */
+[data-md-color-scheme="slate"] .md-header {
+  background-color: var(--dracula-bg);
+  border-bottom: 1px solid var(--dracula-comment);
+}
+
+[data-md-color-scheme="slate"] .md-tabs {
+  background-color: var(--dracula-bg);
+}
+
+/* Красивые границы для блоков */
+[data-md-color-scheme="slate"] .md-typeset h1, 
+[data-md-color-scheme="slate"] .md-typeset h2 {
+    color: var(--dracula-purple);
+    font-weight: 700;
+}
